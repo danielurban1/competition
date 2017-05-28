@@ -1,0 +1,63 @@
+2	Academia Gorila
+3	Akademia Fenix
+4	Alliance
+5	Barracuda
+6	Bastion
+7	Berserkers Team
+9	BJJ Factory
+10	BJJ Panther Nowogard
+11	Brak
+12	Checkmat
+13	Copacabana
+14	Dragons Den
+15	Espadon swiecie
+16	Exilados Koszalin
+17	Fight Club Bytom
+18	Forca Brava
+19	Frontline Academy
+20	Gold Team
+21	Grace Barra
+22	Grappling
+23	Grappling Rzeszow
+24	Heros team
+25	Husaria Mlawa
+26	Invictus Bjj
+27	Jamniuk Gorzow
+28	Jungle Bjj
+29	Kaito Stalowa Wola
+30	Katana Szczytno
+31	KLUB WALKI GRAPPLER
+32	Koch Jiu-Jitsu
+33	Ksw Nokaut Koscian
+34	Legia Fight Club
+35	LFC/ZENITH
+36	Linke Gold Team
+37	LINKE GOLD TEAM POLSKA
+38	Lions Glogow
+39	Marga sfg Radom
+40	Next Level BJJ
+41	NKSW Bastion
+42	Octopus
+43	Piranha Gdynia
+44	Pretorian
+45	Rio Grappling
+46	Roger Gracie Academy Norway
+47	Rosomak
+48	S4 Fight Club
+49	Serpentes Slupsk
+50	Shooters Team
+51	Staraya Shkola
+52	Strefa Walki
+53	Unia Jiu Jitsu
+54	United Gym
+55	Urban Jiu Jitsu
+56	Valiant
+57	Vataha
+58	Walka Gniezno
+59	Warszawa
+60	WroX Gym
+61	X-Team
+62	XYZ FIGHT ACADEMY
+63	Zenith BJJ
+64	Zlomiarz Team
+	
