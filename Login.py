@@ -14,6 +14,6 @@ class Login():
             password = input("Input password: ")
             if login == "root" and password == "123Fokus456p":
                 print("Logged as an admin.")
-                return "admin"
             else:
                 print("Invalid login or password. Try again.")
+                
