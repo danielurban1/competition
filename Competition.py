@@ -3,13 +3,14 @@ import pymysql
 class BDtemplate:
 
     def __init__(self):
-        self.conn = pymysql.connect("localhost", "root", "123Fokus456p", "zawody_bjj")
-        self.divisions = ["biale_64", "biale_70", "biale_76", "biale_82_i_3", "biale_88_i_3", "biale_100_i_5", "biale_plus_100_i_5", "niebieskie_64", "niebieskie_70", "niebieskie_76", "niebieskie_82_i_3", "niebieskie_88_i_3", "niebieskie_94_i_3", "niebieskie_100_i_5", "niebieskie_plus_100_i_5", "purpurowe_57_i_5", "purpurowe_64", "purpurowe_70", "purpurowe_76", "purpurowe_82_i_3", "purpurowe_88_i_3", "purpurowe_94_i_3", "purpurowe_100_i_5", "purpurowe_plus_100_i_5", "elita_64", "elita_70", "elita_76", "elita_82_i_3", "elita_88_i_3", "elita_94_i_3", "elita_100_i_5", "elita_plus_100_i_5"]
+        
         while (True):
+            self.conn = pymysql.connect("localhost", "root", "123Fokus456p", "zawody_bjj")
+            self.divisions = ["biale_64", "biale_70", "biale_76", "biale_82_i_3", "biale_88_i_3", "biale_100_i_5", "biale_plus_100_i_5", "niebieskie_64", "niebieskie_70", "niebieskie_76", "niebieskie_82_i_3", "niebieskie_88_i_3", "niebieskie_94_i_3", "niebieskie_100_i_5", "niebieskie_plus_100_i_5", "purpurowe_57_i_5", "purpurowe_64", "purpurowe_70", "purpurowe_76", "purpurowe_82_i_3", "purpurowe_88_i_3", "purpurowe_94_i_3", "purpurowe_100_i_5", "purpurowe_plus_100_i_5", "elita_64", "elita_70", "elita_76", "elita_82_i_3", "elita_88_i_3", "elita_94_i_3", "elita_100_i_5", "elita_plus_100_i_5"]            
             self.cursor = self.conn.cursor()
             self.i = input('What wpuld you like to do? (I)-insert, (S)-select, (U)-update, (D)-drop, (Q)-quit').upper()
             if (self.i == 'I'):    
-                self.wprowadzanie()
+                self.insert()
                 self.__init__()
             elif(self.i == 'S'):
                 self.select()
@@ -25,7 +26,37 @@ class BDtemplate:
                 break
             self.conn.close()
 
+    def insert(self):
+        try:
+            login = input("Input login: ")
+            password = input("Input password: ")
+            
+            name = input("Input name and surename: ")
+            category = input("Input id of category: ")
+            club = input("Input id of club: ")
+            
+            self.sql1 = "insert into login (login, haslo) values('" + login + "', '" + password + "');"
+            self.cursor.execute(self.sql1)
+            self.conn.commit()        
+            
+            self.sql2 = "select id_login from login where login = '" + login + "';"
+            self.cursor.execute(self.sql2)
+            self.results = self.cursor.fetchall()  
+            id_login = ""
+            for letter in str(self.results):
+                if letter == "0" or letter == "1" or letter == "2" or letter == "3" or letter =="4" or letter =="5" or letter =="6" or letter =="7" or letter =="8" or letter =="9":
+                    id_login +=letter
+            
+            self.sql3 = "insert into dane_os values(" + id_login + ", '" + name + "', " + category + ", " + club + ");"
+            self.cursor.execute(self.sql3)
+            self.conn.commit() 
+            print("Inserted.")
+        except:
+            print("Something went wrong")
+        
+        
     def drop(self):
+        
         while True:
             self.name = input("Input name: ")
             try:
