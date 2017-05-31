@@ -210,5 +210,4 @@ class BDtemplate:
             referee = row[1]
             print ("%10s" % (referee))    
             
-o1 = BDtemplate()
 

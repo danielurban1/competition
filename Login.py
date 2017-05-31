@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import pymysql
+import getpass
 
 class Login():
     
@@ -10,10 +11,13 @@ class Login():
         
     def logging(self):
         while True:
-            login = input("Input user name: ")
-            password = input("Input password: ")
+            login = input("User name: ")
+            password = getpass.getpass('Password:')
             if login == "root" and password == "123Fokus456p":
                 print("Logged as an admin.")
+                return "admin";
+            elif login == "guest" and password == "guest":
+                print("Logged as a guest.")
+                return "guest";
             else:
                 print("Invalid login or password. Try again.")
-                
